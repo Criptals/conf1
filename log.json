@@ -1,0 +1,135 @@
+[
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Parsing command: ls"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Detected command: ls"
+  },
+  {
+    "user": "Sergey",
+    "command": "ls"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Parsing command: pwd"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Detected command: pwd"
+  },
+  {
+    "user": "Sergey",
+    "command": "pwd",
+    "message": "Current dir: /"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Parsing command: cd filesys"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Detected command: cd"
+  },
+  {
+    "user": "Sergey",
+    "command": "cd",
+    "message": "From: / To: /filesys/"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Parsing command: cd vfg"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Detected command: cd"
+  },
+  {
+    "user": "Sergey",
+    "command": "cd",
+    "message": "From: /filesys/ To: /filesys/vfg/"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Parsing command: pwd"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Detected command: pwd"
+  },
+  {
+    "user": "Sergey",
+    "command": "pwd",
+    "message": "Current dir: /filesys/vfg/"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Parsing command: chmod 444 conf.conf"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Detected command: chmod"
+  },
+  {
+    "user": "Sergey",
+    "command": "chown",
+    "message": "File: filesys/vfg/conf.conf New permissions: 444"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Parsing command: ls"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Detected command: ls"
+  },
+  {
+    "user": "Sergey",
+    "command": "ls"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Parsing command: cd /"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Detected command: cd"
+  },
+  {
+    "user": "Sergey",
+    "command": "cd",
+    "message": "From: /filesys/vfg/ To: /"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Parsing command: exit"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Detected command: exit"
+  },
+  {
+    "user": "Sergey",
+    "command": "exit",
+    "message": "Exiting..."
+  }
+]

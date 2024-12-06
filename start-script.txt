@@ -1,0 +1,7 @@
+ls
+pwd
+cd filesys/vfg
+pwd
+cd /
+chmod 444 /filesys/2.txt
+mv /filesys/2.txt /filesys/vfg
