@@ -80,7 +80,6 @@ class Emulator:
 
             return "chown: Provide additional arguments"
 
-
         output = ""
 
         self.logger("chown", f"File: {path_to_file} New permissions: {new_permissions}")
@@ -89,7 +88,7 @@ class Emulator:
         try:
             temp_dir = "tmp"
             # Извлечение файлов во временную директорию
-            with ZipFile(self.filesystem.filename, 'r') as zip_ref:
+            with ZipFile(self.filesystem.filename, 'w') as zip_ref:
                 zip_ref.extractall(temp_dir)
 
             # Изменение атрибутов файла
@@ -114,7 +113,6 @@ class Emulator:
             os.remove(name)
             os.rename("updated_archive.zip", name)
             self.filesystem = ZipFile(name, 'a')
-
 
         except KeyError:
              output = "Error reading a file: " + path_to_file

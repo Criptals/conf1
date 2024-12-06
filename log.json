@@ -16,67 +16,7 @@
   {
     "user": "Sergey",
     "command": "command_parse",
-    "message": "Parsing command: pwd"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Detected command: pwd"
-  },
-  {
-    "user": "Sergey",
-    "command": "pwd",
-    "message": "Current dir: /"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Parsing command: cd filesys"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Detected command: cd"
-  },
-  {
-    "user": "Sergey",
-    "command": "cd",
-    "message": "From: / To: /filesys/"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Parsing command: cd vfg"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Detected command: cd"
-  },
-  {
-    "user": "Sergey",
-    "command": "cd",
-    "message": "From: /filesys/ To: /filesys/vfg/"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Parsing command: pwd"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Detected command: pwd"
-  },
-  {
-    "user": "Sergey",
-    "command": "pwd",
-    "message": "Current dir: /filesys/vfg/"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Parsing command: chmod 444 conf.conf"
+    "message": "Parsing command: chmod 777 /filesys/1.txt"
   },
   {
     "user": "Sergey",
@@ -86,7 +26,7 @@
   {
     "user": "Sergey",
     "command": "chown",
-    "message": "File: filesys/vfg/conf.conf New permissions: 444"
+    "message": "File: filesys/1.txt New permissions: 777"
   },
   {
     "user": "Sergey",
@@ -105,7 +45,22 @@
   {
     "user": "Sergey",
     "command": "command_parse",
-    "message": "Parsing command: cd /"
+    "message": "Parsing command: pwd"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Detected command: pwd"
+  },
+  {
+    "user": "Sergey",
+    "command": "pwd",
+    "message": "Current dir: /"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Parsing command: cd /filesys"
   },
   {
     "user": "Sergey",
@@ -115,7 +70,37 @@
   {
     "user": "Sergey",
     "command": "cd",
-    "message": "From: /filesys/vfg/ To: /"
+    "message": "Error: No such file or directory: /filesys/"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Parsing command: cd /filesys/vfg"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Detected command: cd"
+  },
+  {
+    "user": "Sergey",
+    "command": "cd",
+    "message": "Error: No such file or directory: /filesys/vfg/"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Parsing command: cd /filesys/bff"
+  },
+  {
+    "user": "Sergey",
+    "command": "command_parse",
+    "message": "Detected command: cd"
+  },
+  {
+    "user": "Sergey",
+    "command": "cd",
+    "message": "Error: No such file or directory: /filesys/bff/"
   },
   {
     "user": "Sergey",
