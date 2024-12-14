@@ -37,6 +37,7 @@ python main.py -u Sergey -a filesys.zip -l log.json -s empty.txt
 ![img_1.png](img_1.png)
 
 Результат использования команды mv /filesys/bff/2.txt /filesys
+
 ![img_4.png](img_4.png)
 
 Результат использования команды chmod /filesys/1.txt
