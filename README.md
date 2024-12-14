@@ -32,6 +32,7 @@ python main.py -u Sergey -a filesys.zip -l log.json -s empty.txt
 ## Тестирование
 
 Запуск программы
+
 ![img.png](img.png)
 
 ![img_1.png](img_1.png)
@@ -41,4 +42,5 @@ python main.py -u Sergey -a filesys.zip -l log.json -s empty.txt
 ![img_4.png](img_4.png)
 
 Результат использования команды chmod /filesys/1.txt
+
 ![img_3.png](img_3.png)
