@@ -16,17 +16,17 @@
   {
     "user": "Sergey",
     "command": "command_parse",
-    "message": "Parsing command: chmod 777 /filesys/1.txt"
+    "message": "Parsing command: mv /filesys/bff/2.txt /filesys"
   },
   {
     "user": "Sergey",
     "command": "command_parse",
-    "message": "Detected command: chmod"
+    "message": "Detected command: mv"
   },
   {
     "user": "Sergey",
-    "command": "chown",
-    "message": "File: filesys/1.txt New permissions: 777"
+    "command": "mv",
+    "message": "File: filesys/bff/2.txt New path: filesys"
   },
   {
     "user": "Sergey",
@@ -41,66 +41,6 @@
   {
     "user": "Sergey",
     "command": "ls"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Parsing command: pwd"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Detected command: pwd"
-  },
-  {
-    "user": "Sergey",
-    "command": "pwd",
-    "message": "Current dir: /"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Parsing command: cd /filesys"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Detected command: cd"
-  },
-  {
-    "user": "Sergey",
-    "command": "cd",
-    "message": "Error: No such file or directory: /filesys/"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Parsing command: cd /filesys/vfg"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Detected command: cd"
-  },
-  {
-    "user": "Sergey",
-    "command": "cd",
-    "message": "Error: No such file or directory: /filesys/vfg/"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Parsing command: cd /filesys/bff"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Detected command: cd"
-  },
-  {
-    "user": "Sergey",
-    "command": "cd",
-    "message": "Error: No such file or directory: /filesys/bff/"
   },
   {
     "user": "Sergey",

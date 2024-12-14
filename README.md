@@ -1,4 +1,4 @@
-# conf3
+# conf1
 Этот проект представляет эмулятор командной строки.
 
 ## Задание 
@@ -31,12 +31,13 @@ python main.py -u Sergey -a filesys.zip -l log.json -s empty.txt
 
 ## Тестирование
 
+Запуск программы
 ![img.png](img.png)
 
 ![img_1.png](img_1.png)
 
-Результат использования команды mv /filesys/2.txt
-![img_2.png](img_2.png)
+Результат использования команды mv /filesys/bff/2.txt /filesys
+![img_4.png](img_4.png)
 
 Результат использования команды chmod /filesys/1.txt
 ![img_3.png](img_3.png)

@@ -5,6 +5,16 @@ import shutil
 import sys
 import tkinter as tk
 from zipfile import ZipFile
+import errno, stat
+
+
+def handleRemoveReadonly(func, path, exc):
+    excvalue = exc[1]
+    if func in (os.rmdir, os.remove) and excvalue.errno == errno.EACCES:
+        os.chmod(path, stat.S_IRWXU| stat.S_IRWXG| stat.S_IRWXO) # 0777
+        func(path)
+    else:
+        raise
 
 
 class Emulator:
@@ -98,19 +108,13 @@ class Emulator:
             os.chmod(path_to_file, int(new_permissions, 8))
 
             # Создание нового архива с обновленными файлами
-            new_archive_path = "updated_archive.zip"
-            with ZipFile(new_archive_path, 'w') as zip_write:
-                for foldername, subfolders, filenames in os.walk(temp_dir):
-                    for filename in filenames:
-                        file_path = os.path.join(foldername, filename)
-                        # Добавление файла в архив с новыми атрибутами
-                        zip_write.write(file_path, os.path.relpath(file_path, temp_dir))
-
+            new_archive_path = "updated_archive"
+            shutil.make_archive(new_archive_path, 'zip', "tmp")
             # Удаление временной директории после завершения
-            shutil.rmtree(temp_dir)
+            shutil.rmtree("tmp", ignore_errors=False, onerror=handleRemoveReadonly)
 
             name = self.filesystem.filename
-            os.remove(name)
+            os.rmdir(name)
             os.rename("updated_archive.zip", name)
             self.filesystem = ZipFile(name, 'a')
 
@@ -145,28 +149,21 @@ class Emulator:
             with ZipFile(self.filesystem.filename, 'r') as zip_ref:
                 zip_ref.extractall(temp_dir)
 
-
             old_path = os.path.join(temp_dir, old_path)
             new_path = os.path.join(temp_dir, new_path)
 
             shutil.move(old_path, new_path)
 
             # Создание нового архива с обновленными файлами
-            new_archive_path = "updated_archive.zip"
-            with ZipFile(new_archive_path, 'w') as zip_write:
-                for foldername, subfolders, filenames in os.walk(temp_dir):
-                    for filename in filenames:
-                        file_path = os.path.join(foldername, filename)
-                        # Добавление файла в архив с новыми атрибутами
-                        zip_write.write(file_path, os.path.relpath(file_path, temp_dir))
-
+            new_archive_path = "updated_archive"
+            shutil.make_archive(new_archive_path, 'zip', "tmp")
             # Удаление временной директории после завершения
-            shutil.rmtree(temp_dir)
+            shutil.rmtree("tmp", ignore_errors=False, onerror=handleRemoveReadonly)
 
             name = self.filesystem.filename
             os.remove(name)
             os.rename("updated_archive.zip", name)
-            self.filesystem = ZipFile(sys.argv[1], 'a')
+            self.filesystem = ZipFile(name, 'a')
         except FileNotFoundError:
              output = "No such file or directory: " + new_path
         return output
