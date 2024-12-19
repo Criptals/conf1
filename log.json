@@ -16,21 +16,6 @@
   {
     "user": "Sergey",
     "command": "command_parse",
-    "message": "Parsing command: mv /filesys/bff/2.txt /filesys"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
-    "message": "Detected command: mv"
-  },
-  {
-    "user": "Sergey",
-    "command": "mv",
-    "message": "File: filesys/bff/2.txt New path: filesys"
-  },
-  {
-    "user": "Sergey",
-    "command": "command_parse",
     "message": "Parsing command: ls"
   },
   {

@@ -295,8 +295,41 @@ def parse_args():
     return parser.parse_args()
 
 
+def lscheck():
+    ot = ["/filesys/", "/filesys/bff/", "/filesys/vfg/", "/filesys/1.txt", "/filesys/2.txt", "/filesys/bff/3g4.txt",
+          "/filesys/bff/sfv2.txt", "/filesys/vfg/conf.conf"]
+    t = ""
+    for i in ot:
+        t = t + i + "\n"
+    t = t.strip()
+    print("Check ls: ", tfield.emulator.ls()==t)
+def checkcd():
+    tfield.emulator.cd("cd /filesys/bff")
+    pw = tfield.emulator.pwd()
+    print("Check cd: ", pw == "/filesys/bff/")
+def checkmv():
+    tfield.emulator.mv("mv /filesys/1.txt /filesys/bff")
+    l = tfield.emulator.ls()
+    ot = ["/filesys/", "/filesys/bff/", "/filesys/vfg/", "/filesys/2.txt", "/filesys/bff/1.txt", "/filesys/bff/3g4.txt",
+          "/filesys/bff/sfv2.txt", "/filesys/vfg/conf.conf"]
+    t = ""
+    for i in ot:
+        t = t + i + "\n"
+    t = t.strip()
+    print("Check ls: ", l == t)
+    tfield.emulator.mv("mv /filesys/bff/1.txt /filesys")
+    return 0
+
+
+#def checkcmod():
+#    return 0
+
+
 if __name__ == "__main__":
     root = tk.Tk()
     tfield = ConsoleText(root, bg='gray10', fg='white', insertbackground='white')
     tfield.pack()
+    #lscheck()
+    #checkcd()
+    #checkmv()
     root.mainloop()
